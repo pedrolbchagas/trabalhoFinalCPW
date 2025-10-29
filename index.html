@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Características Genéticas</title>
+    <script src="backend/back.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Selecione as características genéticas</h1>
+    
+    <form>
+        <label for="cor-olhos">Cor dos olhos:</label>
+        <select id="cor-olhos-M" name="cor-olhos">
+            <option value="" disabled selected>Selecione uma opção</option>
+            <option value="aa">Azul</option>
+            <option value="aa">Verde</option>
+            <option value="AA">Castanho</option>
+            <option value="AA">Preto</option>
+        </select><br><br>
+        
+        <label for="cor-cabelos">Cor dos cabelos:</label>
+        <select id="cor-cabelos-M" name="cor-cabelos">
+            <option value="" disabled selected>Selecione uma opção</option>
+            <option value="aa">Loiro</option>
+            <option value="AA">Castanho</option>
+            <option value="AA">Preto</option>
+            <option value="aa">Ruivo</option>
+        </select><br><br>
+        
+        <label for="tipo-cabelo">Tipo de cabelo:</label>
+        <select id="tipo-cabelo-M" name="tipo-cabelo">
+              <option value="" disabled selected>Selecione uma opção</option>
+            <option value="aa">Liso</option>
+          <!--<option value="ondulado">Ondulado</option>--> <!--  fazer uma alteração depois para esse tipo de caracteristica que é determinada por uma herança incompleta -->
+            <option value="AA">Cacheado</option>
+            <option value="AA">Crespo</option>
+        </select><br><br>
+
+            <label for="cor-olhos">Cor dos olhos:</label>
+        <select id="cor-olhos-P" name="cor-olhos">
+              <option value="" disabled selected>Selecione uma opção</option>
+            <option value="aa">Azul</option>
+            <option value="aa">Verde</option>
+            <option value="AA">Castanho</option>
+            <option value="AA">Preto</option>
+        </select><br><br>
+        
+        <label for="cor-cabelos">Cor dos cabelos:</label>
+        <select id="cor-cabelos-P" name="cor-cabelos">
+              <option value="" disabled selected>Selecione uma opção</option>
+            <option value="aa">Loiro</option>
+            <option value="AA">Castanho</option>
+            <option value="AA">Preto</option>
+            <option value="aa">Ruivo</option>
+        </select><br><br>
+        
+        <label for="tipo-cabelo">Tipo de cabelo:</label>
+        <select id="tipo-cabelo-P" name="tipo-cabelo">
+              <option value="" disabled selected>Selecione uma opção</option>
+            <option value="aa">Liso</option>
+          <!--<option value="ondulado">Ondulado</option>--> <!--  fazer uma alteração depois para esse tipo de caracteristica que é determinada por uma herança incompleta -->
+            <option value="AA">Cacheado</option>
+            <option value="AA">Crespo</option>
+        </select><br><br>
+        <input type="submit" value="Enviar" onclick="guardaAlelosPais()">
+    </form>
+</body>
+</html>
