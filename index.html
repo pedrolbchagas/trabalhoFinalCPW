@@ -1,70 +1,69 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Características Genéticas</title>
-    <script src="backend/back.js"></script>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <h1>Selecione as características genéticas</h1>
-    
-    <form>
-        <label for="cor-olhos">Cor dos olhos:</label>
-        <select id="cor-olhos-M" name="cor-olhos">
-            <option value="" disabled selected>Selecione uma opção</option>
-            <option value="aa">Azul</option>
-            <option value="aa">Verde</option>
-            <option value="AA">Castanho</option>
-            <option value="AA">Preto</option>
-        </select><br><br>
-        
-        <label for="cor-cabelos">Cor dos cabelos:</label>
-        <select id="cor-cabelos-M" name="cor-cabelos">
-            <option value="" disabled selected>Selecione uma opção</option>
-            <option value="aa">Loiro</option>
-            <option value="AA">Castanho</option>
-            <option value="AA">Preto</option>
-            <option value="aa">Ruivo</option>
-        </select><br><br>
-        
-        <label for="tipo-cabelo">Tipo de cabelo:</label>
-        <select id="tipo-cabelo-M" name="tipo-cabelo">
-              <option value="" disabled selected>Selecione uma opção</option>
-            <option value="aa">Liso</option>
-          <!--<option value="ondulado">Ondulado</option>--> <!--  fazer uma alteração depois para esse tipo de caracteristica que é determinada por uma herança incompleta -->
-            <option value="AA">Cacheado</option>
-            <option value="AA">Crespo</option>
-        </select><br><br>
+    <script type="module" src="backend/ui.js"></script>
+    <title>Calculadora probabilidade genética</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>🧬 Calculadora Genética</h1>
+      
+      <div class="container-calculadora">
+        <div class="inputs">
+          
+          <!-- Card do Pai -->
+          <div class="card-pessoa">
+            <div class="pessoa-header">
+              <h2> Pai</h2>
+            </div>
+            <div class="caracteristicas" id="caracteristicas-pai"></div>
+            
+            <div class="secaoAvos">
+              <h3 class="avos-title"> Avós Paternos</h3>
+              <div class="avos-container">
+                <div class="avo-card">
+                  <h4> Avô Paterno</h4>
+                  <div class="caracteristicas" id="caracteristicas-avo-paterno"></div>
+                </div>
+                <div class="avo-card">
+                  <h4> Avó Paterna</h4>
+                  <div class="caracteristicas" id="caracteristicas-ava-paterna"></div>
+                </div>
+              </div>
+            </div>
+          </div>
 
-            <label for="cor-olhos">Cor dos olhos:</label>
-        <select id="cor-olhos-P" name="cor-olhos">
-              <option value="" disabled selected>Selecione uma opção</option>
-            <option value="aa">Azul</option>
-            <option value="aa">Verde</option>
-            <option value="AA">Castanho</option>
-            <option value="AA">Preto</option>
-        </select><br><br>
+          <!-- Card da Mãe -->
+          <div class="card-pessoa">
+            <div class="pessoa-header">
+              <h2> Mãe</h2>
+            </div>
+            <div class="caracteristicas" id="caracteristicas-mae"></div>
+            
+            <div class="secaoAvos">
+              <h3 class="avos-title"> Avós Maternos</h3>
+              <div class="avos-container">
+                <div class="avo-card">
+                  <h4> Avô Materno</h4>
+                  <div class="caracteristicas" id="caracteristicas-avo-materno"></div>
+                </div>
+                <div class="avo-card">
+                  <h4> Avó Materna</h4>
+                  <div class="caracteristicas" id="caracteristicas-ava-materna"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
         
-        <label for="cor-cabelos">Cor dos cabelos:</label>
-        <select id="cor-cabelos-P" name="cor-cabelos">
-              <option value="" disabled selected>Selecione uma opção</option>
-            <option value="aa">Loiro</option>
-            <option value="AA">Castanho</option>
-            <option value="AA">Preto</option>
-            <option value="aa">Ruivo</option>
-        </select><br><br>
-        
-        <label for="tipo-cabelo">Tipo de cabelo:</label>
-        <select id="tipo-cabelo-P" name="tipo-cabelo">
-              <option value="" disabled selected>Selecione uma opção</option>
-            <option value="aa">Liso</option>
-          <!--<option value="ondulado">Ondulado</option>--> <!--  fazer uma alteração depois para esse tipo de caracteristica que é determinada por uma herança incompleta -->
-            <option value="AA">Cacheado</option>
-            <option value="AA">Crespo</option>
-        </select><br><br>
-        <input type="submit" value="Enviar" onclick="guardaAlelosPais()">
-    </form>
-</body>
+        <button class="calculate-btn" onclick="calculaTodasAsProbabilidades()">
+          🧬 Calcular Probabilidades Genéticas
+        </button>
+      </div>
+    </div>
+  </body>
 </html>
